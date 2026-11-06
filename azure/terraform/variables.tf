@@ -5,8 +5,8 @@ variable "subscription_id" {
 
 variable "location" {
   type        = string
-  description = "Region validada para la suscripcion y el tamano de VM."
-  default     = "eastus2"
+  description = "Region utilizada para el despliegue; verificar politicas y capacidad de la suscripcion."
+  default     = "mexicocentral"
 }
 
 variable "resource_prefix" {
@@ -21,8 +21,14 @@ variable "resource_prefix" {
 
 variable "vm_size" {
   type        = string
-  description = "Tamano disponible en la suscripcion y region."
-  default     = "Standard_B2s"
+  description = "Tamano de VM; el valor inicial se valido en Mexico Central, zona 1."
+  default     = "Standard_B2s_v2"
+}
+
+variable "vm_zone" {
+  type        = string
+  description = "Zona de disponibilidad de la VM. Verificar restricciones del SKU antes de cambiarla."
+  default     = "1"
 }
 
 variable "admin_username" {
