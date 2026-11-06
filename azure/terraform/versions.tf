@@ -3,7 +3,8 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 4.0, < 5.0"
+      # Version verificada durante la validacion con Azure for Students.
+      version = "= 4.40.0"
     }
   }
 }
