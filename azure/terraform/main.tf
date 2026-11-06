@@ -79,6 +79,7 @@ resource "azurerm_linux_virtual_machine" "lab" {
   location            = azurerm_resource_group.lab.location
   resource_group_name = azurerm_resource_group.lab.name
   size                = var.vm_size
+  zone                = var.vm_zone
   admin_username      = var.admin_username
   network_interface_ids = [
     azurerm_network_interface.lab.id
